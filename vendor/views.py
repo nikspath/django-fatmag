@@ -66,6 +66,9 @@ class FetchVendorwithID(APIView):
 
 
 class FetchPerformance(APIView):
+    authentication_classes = [TokenAuthentication]
+    permissions_classes = [IsAuthenticated]
+    
     def get(self,request,*args,**kwargs):
         vendor_id = kwargs['id']
         histomrial_performance = HistoricalPerformance.objects.filter(vendor = vendor_id)

@@ -70,6 +70,8 @@ class FetchPurchaseOrder(APIView):
 
 
 class PurchaseOrderWithId(APIView):
+    authentication_classes = [TokenAuthentication]
+    permissions_classes = [IsAuthenticated]
 
 
     def get(self,request,*args,**kwargs):
