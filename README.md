@@ -156,7 +156,11 @@
   -> this file contain login_user which to login with admin user and create token 
 
 #############################################################################  
-  
+# Test case:
+  -> created test case for purchase order 
+  -> test calculate_averge utils function
+  -> to run test case
+    -> python manage.py test
   
       
     
